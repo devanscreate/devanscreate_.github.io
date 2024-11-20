@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do List</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="todo-wrapper">
+      <h2>My Weekly To Do List</h2>
+      <p>Click on an item to mark it as complete</p>
+
+      <form name="todo-adder">
+        <input type="text" id="todo-entry-box" placeholder="Enter a task" />
+        <select id="day-select">
+          <option value="monday">Monday</option>
+          <option value="tuesday">Tuesday</option>
+          <option value="wednesday">Wednesday</option>
+          <option value="thursday">Thursday</option>
+          <option value="friday">Friday</option>
+          <option value="saturday">Saturday</option>
+          <option value="sunday">Sunday</option>
+        </select>
+      </form>
+      <button id="add-button" class="pretty-button">Add</button>
+
+      <!-- Tabel To Do List untuk setiap hari -->
+      <table class="todo-table">
+        <thead>
+          <tr>
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+            <th>Thursday</th>
+            <th>Friday</th>
+            <th>Saturday</th>
+            <th>Sunday</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td id="monday-list"></td>
+            <td id="tuesday-list"></td>
+            <td id="wednesday-list"></td>
+            <td id="thursday-list"></td>
+            <td id="friday-list"></td>
+            <td id="saturday-list"></td>
+            <td id="sunday-list"></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div id="control-wrapper">
+        <button
+          id="clear-completed-button"
+          onclick="clearCompletedToDoItems()"
+          class="pretty-button"
+        >
+          Clear Completed
+        </button>
+        <button id="empty-button" onclick="emptyList()" class="pretty-button">
+          Empty List
+        </button>
+        <button id="save-button" onclick="saveList()" class="pretty-button">
+          Save List
+        </button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

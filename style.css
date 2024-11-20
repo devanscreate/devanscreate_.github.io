@@ -1,0 +1,63 @@
+.todo-table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.todo-table th,
+.todo-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  vertical-align: top;
+}
+
+.todo-table th {
+  background-color: #4caf50;
+  color: white;
+}
+
+td {
+  height: 150px;
+  width: 14.28%;
+  overflow-y: auto;
+}
+
+#day-select {
+  padding: 8px;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+/* Animasi coret pada item */
+.completed {
+  position: relative;
+  overflow: hidden;
+  color: #888;
+  text-decoration: line-through;
+  transition: color 0.3s ease;
+}
+
+.completed::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 50%;
+  width: 100%;
+  height: 2px;
+  background-color: #ff6347;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.completed:hover {
+  color: #555;
+}
+
+.completed::after {
+  transform: scaleX(1);
+}
+
+.todo-table td {
+  cursor: pointer;
+}
